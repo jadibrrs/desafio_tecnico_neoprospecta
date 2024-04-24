@@ -26,7 +26,6 @@ Cypress.Commands.add('visitCustomDashboard', () => {
     
     cy.contains('Dashboard Personalizado')
         .should('be.visible')
-    
 })
 
 
