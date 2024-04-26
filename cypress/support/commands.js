@@ -28,5 +28,23 @@ Cypress.Commands.add('visitCustomDashboard', () => {
         .should('be.visible')
 })
 
+Cypress.Commands.add('clickButtonAddGraphic', () => {
+    cy.get('.mat-tooltip-trigger > .bq-theme > .mat-focus-indicator')
+        .click()
+    
+    cy.get('.dialog-form__title')
+        .should('be.visible')
+})
 
+Cypress.Commands.add('showGroupBySelect', () => {
+    cy.get('#mat-dialog-1')
+        .contains('Eixo X*')
+        .click({force: true})
+        .get('[role="listbox')
+        .contains('Data da coleta da amostra')
+        .click()
+    cy.get('#mat-dialog-1')
+        .contains('Agrupar por*')
+        .should('exist')
+})
 
