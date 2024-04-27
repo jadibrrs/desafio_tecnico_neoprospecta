@@ -48,3 +48,10 @@ Cypress.Commands.add('showGroupBySelect', () => {
         .should('exist')
 })
 
+Cypress.Commands.add('visitCollectionPlan', () => {
+    cy.contains('Plano de Coleta')
+        .click()
+    
+    cy.contains('Planos de Coletas')
+        .should('be.visible')
+})
