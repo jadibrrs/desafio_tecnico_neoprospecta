@@ -10,7 +10,7 @@ Cypress.Commands.add('visitAndSignIn', () => {
     
     cy.get('[data-cy="password"]')
         .click()
-        .type('@#$%werRR')
+        .type('Matherson1')
 
     cy.get('[data-cy="login-submit"]')
         .click()
