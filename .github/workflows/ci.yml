@@ -1,23 +1,11 @@
-name: Manual End-to-End Tests
-
-on:
-  workflow_dispatch:  # Gatilho manual
-
+name: Chrome
+on: push
 jobs:
-  e2e-tests:
+  chrome:
     runs-on: ubuntu-22.04
-    name: Run End-to-End Tests
+    name: E2E on Chrome
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Select Browser
-        id: browser
-        run: |
-          echo "::set-output name=browser::${{ github.event.inputs.browser }}"
-        shell: bash
-        env:
-          BROWSER: ${{ github.event.inputs.browser }}
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
         with:
-          browser: ${{ steps.browser.outputs.browser }}
+          browser: chrome
