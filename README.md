@@ -7,6 +7,10 @@ Período: 23/04/2024 a 26/04/2024
 
 👋 Olá! Este é a minha resolução de uma das atividades do desafio técnico da empresa acima mencionada. 
 
+Infelizmente não é possível rodar o projeto pois não tenho mais acesso ao ambiente (recebi dados de login válidos apenas durante a realização do desafio), mas deixo aqui o que desenvolvi. 
+
+As pré-condições e instruções para instalação descritas abaixo foram elaboradas durante o desafio.
+
 ### ℹ Pré-condições
 
 É necessário ter Node.js and npm instalados para rodar este projeto.
