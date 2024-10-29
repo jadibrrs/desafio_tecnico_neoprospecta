@@ -1,3 +1,5 @@
+import CREDENTIALS from '../credentials.js';
+
 Cypress.Commands.add('visitAndSignIn', () => {
     cy.visit('https://qa1-frontend-biomequality-husrbtcmsa-ue.a.run.app/pt-BR/login')
     
@@ -6,11 +8,11 @@ Cypress.Commands.add('visitAndSignIn', () => {
     
     cy.get('[data-cy="username"]')
         .click()
-        .type('jbheliodoro@gmail.com')
+        .type(CREDENTIALS.username)
     
     cy.get('[data-cy="password"]')
         .click()
-        .type('Matherson1')
+        .type(CREDENTIALS.password)
 
     cy.get('[data-cy="login-submit"]')
         .click()
